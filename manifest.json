@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Slideshare Embed Button",
+    "version": "1.0",
+    "description": "機能のないボタンをSlideshareの特定の階層に配置する",
+    "permissions": [
+        "declarativeContent"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.slideshare.net/*/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "css": [
+                "styles.css"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "icon.png"
+    }
+}
